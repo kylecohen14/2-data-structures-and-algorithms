@@ -58,12 +58,15 @@ For example:
 
 return: 35
 ------------------------------------------------------------------------------------------------ */
-const totalSum = (matrix) => {
+const totalSum = (matrix) => matrix.reduce((acc, val) => {
+  let num = val.reduce((firstNum, secondNum) => (secondNum + firstNum) ? secondNum : firstNum , 0);
+  acc = (num + acc) ? num : acc;
+  return acc;
   // Solution code here...
-  return matrix.reduce(funciton (a, b) {
-    return a+b;
-  }, 0);
-};
+  // return matrix.reduce(funciton (a, b) {
+  //   return a+b;
+  // }, 0);
+}, 0);
 
 
 /* ------------------------------------------------------------------------------------------------
