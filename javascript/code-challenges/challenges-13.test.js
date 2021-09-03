@@ -8,7 +8,9 @@ Write a function named longestString that takes in an array of strings and retur
 
 const longestString = (arr) => {
 // Solution code here...
-  g
+  // let longest = arr.reduce((a, b) => a.length > b.length ? a : b, '');
+  // return arr.indexOf(longest);
+  return arr.indexOf(arr.reduce((a, b) => a.length > b.length ? a : b, ''));
 };
   
 /* ------------------------------------------------------------------------------------------------
@@ -21,6 +23,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+  return arr.map((firstChar) => {return firstChar[0];});
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,6 +36,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  return arr.filter(word => word.includes(':)'));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +48,7 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
+  return arr.map(word => word.replace(/\D+/g, ''));
   // Solution code here...
 };
 
