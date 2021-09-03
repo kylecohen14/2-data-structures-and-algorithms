@@ -62,6 +62,12 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  let odds = [];
+  let evens = [];
+  for (let i = 0; i < str.length; i++) {
+    i % 2 === 0 ? evens.push(str[i]) : odds.push(str[i]);
+  }
+  return odds.join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,6 +78,8 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  return arr.every(element => element.includes(':)'));
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
