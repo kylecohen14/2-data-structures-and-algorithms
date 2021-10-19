@@ -36,7 +36,6 @@ function insertShiftArray takes in `arr` and 'value':
     
     
     return newArray
-
 ```
 
 ## Actual Code
